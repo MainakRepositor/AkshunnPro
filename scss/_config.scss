@@ -1,0 +1,45 @@
+
+$main-color: #FFC107;
+
+/*
+$main-color: #FFC107
+$main-color: #f44336;
+$main-color: #4CAF50;
+$main-color: #64B5F6;
+*/
+
+
+$shadow-1: 0 3px 8px 0 rgba(15,15,20,.2);
+$shadow-2: 0 1px 4px 0 rgba(15,15,20,.1);
+
+$tr-lg: 0.55s ease-in-out;
+$tr-md: 0.4s ease-in-out;
+$tr-sm: 0.2s ease-in-out;
+
+$text-neon: 0 0 3px rgba(250,250,252,.4);
+
+$card-color: linear-gradient(159deg, rgba(45,45,58,1) 0%, rgba(43,43,53,1) 100%);
+$card-color-light: linear-gradient(159deg, rgba(45,45,58,.98) 0%, rgba(43,43,53,.98) 100%);
+$card-color-s-light: linear-gradient(159deg, rgba(45,45,58,.88) 0%, rgba(43,43,53,.88) 100%);
+
+$info-bar-1-color: rgba(32,32,42,1);
+$info-bar-1-color-light: rgba(32,32,42,.98);
+$info-bar-1-color-s-light: rgba(32,32,42,.88);
+
+$info-bar-2-color: linear-gradient(159deg, rgba(37,37,50,1) 0%, rgba(35,35,45,1) 100%);
+$info-bar-2-color-light: linear-gradient(159deg, rgba(37,37,50,.98) 0%, rgba(35,35,45,.98) 100%);
+$info-bar-2-color-s-light: linear-gradient(159deg, rgba(37,37,50,.88) 0%, rgba(35,35,45,.88) 100%);
+
+$content-color: rgba(30,30,40,1);
+$content-color-light: rgba(30,30,40,.98);
+$content-color-s-light: rgba(30,30,40,.88);
+
+$deep-color: rgba(25,25,35,1);
+$deep-color-light: rgba(25,25,35,.98);
+$deep-color-s-light: rgba(25,25,35,.88);
+
+$text-color-1: rgba(250,250,252,1);
+$text-color-2: rgba(140,140,142,1);
+$text-color-3: rgba(100,100,102,1);
+
+$top-bg-gradient: linear-gradient(180deg, rgba(30,30,40,.93) 0%, rgba(30,30,40,.96) 70%, rgba(30,30,40,.99) 80%, rgba(30,30,40,1) 100%)

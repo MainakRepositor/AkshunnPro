@@ -1,0 +1,63 @@
+/* ------------------------------
+
+burger button
+
+------------------------------ */
+.art-menu-bar-btn {
+  margin-top: -10px;
+  display: inline-block;
+  width: 15px;
+  height: 12px;
+  padding: 30px;
+  cursor: pointer;
+
+  & span,
+  & span:after,
+  & span:before {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 3px;
+    border-radius: 1px;
+    background: $text-color-2;
+    transition: $tr-md;
+    backface-visibility: hidden;
+  }
+
+  & span {
+    position: relative;
+    margin: 5px 0 0;
+
+    &:after,
+    &:before {
+      position: absolute;
+    }
+
+    &:before {
+      top: -5px;
+    }
+
+    &:after {
+      top: 5px;
+    }
+  }
+
+  &.art-active {
+    & span {
+      transform: rotate(45deg);
+      &:before {
+        transform: translate(0px, 5px) rotate(-90deg);
+      }
+      &:after {
+        transform: translate(0px, -5px) rotate(-90deg);
+      }
+    }
+  }
+  &:hover {
+    & span,
+    & span:after,
+    & span:before {
+      background: $text-color-1;
+    }
+  }
+}

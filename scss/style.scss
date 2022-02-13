@@ -1,0 +1,91 @@
+/* -------------------------------------------
+
+Name: 		Arter
+Version:  1.0
+Author:		Nazar Miller (millerDigitalDesign)
+Portfolio:  https://themeforest.net/user/millerdigitaldesign/portfolio?ref=MillerDigitalDesign
+
+p.s. I am available for Freelance hire (UI design, web development). mail: miller.themes@gmail.com
+
+------------------------------------------- */
+
+/*--------------------------------------------
+
+1. common
+      - fonts
+      - text defaults
+      - title defaults
+      - text config
+      - container
+      - buttons frame
+      - suptitle
+      - divider
+      - image defaults
+      - link defaults
+      - table
+      - quote
+      - list
+2. link
+3. buttons
+4. space
+5. app marcup
+      - top background
+      - preloader
+      - scroll frame
+      - app
+      - mobile top bar
+      - info bar
+      - content
+      - menu bar
+      - marcup media queries
+6. info bar
+      - header
+      - name
+      - language skills
+      - hard skills
+      - knowledge
+      - info bar links
+      - social links
+      - progresbar color
+7. menu bar
+      - main menu
+      - language change
+      - current page title
+8. content
+      - section title
+      - card
+      - banner
+      - typing code
+      - counters
+      - services
+      - price
+      - testimonials
+      - timeline
+      - contact form
+      - blog
+      - pagination
+      - brands
+      - footer
+9. portfolio
+      - filter
+      - portfolio items
+      - touch device querie
+      - single project
+      - fancybox customization
+10. media queries
+11. burger button
+12. transitions
+      - in animation
+      - out animation
+
+
+--------------------------------------------*/
+
+@import 'config';
+@import 'common';
+@import 'markup';
+@import 'info-bar';
+@import 'menu-bar';
+@import 'content';
+@import 'burger';
+@import 'transitions';

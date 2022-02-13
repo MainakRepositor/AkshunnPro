@@ -1,0 +1,337 @@
+/* ------------------------------
+
+info bar
+
+------------------------------ */
+
+.art-info-bar {
+  padding: 0 15px;
+  /* ----- header ----- */
+  & .art-header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 99999;
+    width: 100%;
+    padding: 30px;
+    height: 235px;
+    background: $info-bar-2-color-light;
+    text-align: center;
+    box-shadow: $shadow-2;
+
+    & .art-avatar {
+      width: 90px;
+      height: 90px;
+      margin: 0 auto;
+      border-radius: 50%;
+      position: relative;
+      margin-bottom: 15px;
+
+      & .art-avatar-curtain {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        outline: inherit;
+        transition: $tr-sm;
+        z-index: 0;
+
+        & i {
+          background: $card-color-s-light;
+          width: 30px;
+          height: 30px;
+          text-align: center;
+          align-self: center;
+          font-weight: 700;
+          font-size: 11px;
+          line-height: 30px;
+          color: $text-color-1;
+          border-radius: 50%;
+          opacity: 0;
+          z-index: 1;
+          transition: $tr-md;
+        }
+
+        & img {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 50%;
+          z-index: 0;
+        }
+
+        &:hover {
+          opacity: 1;
+          transition: $tr-sm;
+          outline: inherit;
+
+          & i {
+            opacity: .7;
+
+            &:hover {
+              opacity: 1;
+              transform: scale(1.07);
+            }
+          }
+        }
+      }
+
+      & .art-lamp-light {
+        z-index: 2;
+
+        &:before {
+          content: '';
+          position: absolute;
+          bottom: -1px;
+          right: 1px;
+          background: $text-color-1;
+          height: 23px;
+          width: 23px;
+          border-radius: 50%;
+          animation: puls 1s infinite;
+          @keyframes puls {
+            0% {
+              transform: scale(.6);
+              opacity: 1;
+            }
+
+            100% {
+              transform: scale(1);
+              opacity: 0;
+            }
+          }
+        }
+
+        & .art-available-lamp {
+          position: absolute;
+          bottom: 3px;
+          right: 5px;
+          height: 15px;
+          width: 15px;
+          background: $main-color;
+          border-radius: 50%;
+          z-index: 0;
+          transition: $tr-md;
+
+          &:after {
+            position: relative;
+            content: 'I am available for freelance hire';
+            width: 115px;
+            display: block;
+            padding: 5px 10px;
+            top: -10px;
+            left: 28px;
+            font-size: 10px;
+            font-weight: 200;
+
+            color: $text-color-2;
+            box-shadow: $shadow-2;
+            background: $deep-color;
+            opacity: 0;
+            pointer-events: none;
+            transform: translateX(20px);
+            transition: $tr-md;
+            text-align: left;
+          }
+
+          &:before {
+            content: '';
+            position: absolute;
+            height: 5px;
+            width: 5px;
+            right: -15px;
+            top: 5px;
+            opacity: 0;
+            background: $deep-color;
+            pointer-events: none;
+            transform: translateX(20px)rotate(45deg);
+            transition: $tr-md;
+            z-index: 99;
+          }
+
+          &:hover {
+            transform: scale(1);
+
+            &:after {
+              opacity: 1;
+              transform: translateX(0);
+            }
+
+            &:before {
+              opacity: 1;
+              transform: translateX(0)rotate(45deg);
+            }
+          }
+        }
+
+        &.art-not-available {
+          &:before {
+            opacity: 0;
+            animation: none;
+          }
+
+          & .art-available-lamp {
+            background: red;
+
+            &:after {
+              content: "Sorry I'm busy today";
+            }
+          }
+        }
+      }
+    }
+  }
+/* ----- name ----- */
+  .art-name {
+    color: $text-color-1;
+    transition: $tr-md;
+
+    & a {
+      color: $text-color-1;
+      transition: $tr-md;
+    }
+
+    &:hover {
+
+      & a {
+        color: $main-color;
+      }
+    }
+  }
+  /* ----- language skills ----- */
+  & .art-lang-skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    & .art-lang-skills-item {
+      width: 33.33333%;
+      text-align: center;
+      margin-bottom: 15px;
+
+      & .art-cirkle-progress {
+        width: 65%;
+        margin: 0 auto 15px;
+
+        .progressbar-text {
+          font-size: 11px;
+          color: $text-color-2 !important;
+          position: relative;
+          left: 45% !important;
+
+          &:after {
+            content: '%';
+            position: absolute;
+            right: -7px;
+          }
+        }
+      }
+    }
+  }
+  /* ----- hard skills ----- */
+  & .art-hard-skills {
+    & .art-hard-skills-item {
+      margin-bottom: 15px;
+      position: relative;
+
+      & .art-skill-heading {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      & .art-line-progress {
+        width: 100%;
+
+        & .progressbar-text {
+          width: 100%;
+          text-align: right;
+          top: -6px !important;
+          font-size: 11px;
+          color: $text-color-2 !important;
+        }
+      }
+    }
+  }
+  /* ----- knowledge ----- */
+  & .art-knowledge-list {
+    padding-left: 0;
+
+    & li {
+      list-style-type: none;
+      margin-bottom: 5px;
+      color: $text-color-2;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:before {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f00c";
+        margin-right: 5px;
+        font-size: 9px;
+        color: $main-color;
+        margin-right: 10px;
+      }
+    }
+  }
+  /* ----- info bar links ----- */
+  & .art-links-frame {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  /* ----- social links ----- */
+  & .art-ls-social {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 35px;
+    height: 50px;
+    background: $info-bar-2-color-light;
+    position: absolute;
+    bottom: 0;
+    box-shadow: $shadow-2;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+
+    & a {
+      color: $text-color-2;
+      transition: $tr-sm;
+
+      &:hover {
+        text-shadow: $text-neon;
+        color: $text-color-1;
+      }
+    }
+  }
+}
+
+/* ----- progresbar color ----- */
+
+.art-line-progress {
+  & path {
+    &:first-child {
+      stroke: $deep-color;
+    }
+    &:last-child {
+      stroke: $main-color;
+    }
+  }
+}
+
+.art-cirkle-progress {
+  & path {
+    &:first-child {
+      stroke: $deep-color;
+    }
+    &:last-child {
+      stroke: $main-color;
+    }
+  }
+}

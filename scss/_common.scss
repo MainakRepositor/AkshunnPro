@@ -1,0 +1,406 @@
+/* ------------------------------
+
+common
+
+------------------------------ */
+/* ----- fonts ----- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+$pf: 'Poppins', sans-serif;
+$sf: 'Courier Prime', monospace;
+
+/* ----- text defaults ----- */
+body {
+  color: $text-color-2;
+  font-size: 12px;
+  font-family: $pf;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  font-smooth: subpixel-antialiased;
+}
+/* ----- title defaults ----- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  color: $text-color-1;
+  margin-bottom: 0;
+  font-family: $pf;
+}
+
+h1 {
+  font-size: 52px;
+  font-weight: 800;
+}
+
+h4 {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 12px;
+  font-weight: 400;
+}
+/* ----- text config ----- */
+.art-sm-text {
+  font-size: 11px;
+}
+
+.art-lg-text {
+  font-size: 16px;
+}
+
+.art-white {
+  color: $text-color-1;
+}
+/* ----- container ----- */
+.container-fluid {
+  overflow: hidden;
+  padding: 0 30px;
+  position: relative;
+}
+/* ----- buttons frame ----- */
+.art-buttons-frame {
+  & a {
+    margin-right: 15px;
+  }
+}
+/* ----- suptitle ----- */
+.art-el-suptitle {
+  margin-top: 5px;
+  color: $text-color-3;
+  font-style: italic;
+  font-size: 11px;
+}
+/* ----- divider ----- */
+.art-ls-divider {
+  background: $text-color-3;
+  width: 100%;
+  height: 1px;
+  opacity: 0.3;
+}
+/* ----- image defaults ----- */
+.art-img-default {
+  width: 100%;
+  box-shadow: $shadow-1;
+}
+
+/* ----- link defaults ----- */
+a {
+  text-decoration: none;
+  color: $text-color-2;
+
+  &:hover {
+    text-decoration: none;
+    color: $text-color-1;
+  }
+
+  &:focus {
+    outline: inherit;
+  }
+}
+/* ----- table ----- */
+.art-table {
+  color: $text-color-2;
+
+  & ul {
+    padding: 0;
+    margin: 0;
+
+    & li {
+      list-style-type: none;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+/* ----- quote ----- */
+blockquote {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background: $main-color;
+  color: $deep-color;
+  padding: 30px;
+  padding-left: 35px;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 14px;
+  box-shadow: $shadow-2;
+  position: relative;
+
+  &:before {
+    position: absolute;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f10d";
+    font-size: 18px;
+    opacity: .5;
+    top:5px;
+    left: 9px;
+    color: $text-color-1;
+  }
+
+  &:after {
+    position: absolute;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f10d";
+    font-size: 18px;
+    opacity: .5;
+    bottom:5px;
+    right: 9px;
+    color: $text-color-1;
+    transform: rotate(180deg);
+  }
+}
+/* ----- list ----- */
+.art-custom-list {
+  padding-left: 25px;
+
+  & li {
+    position: relative;
+    list-style-type: none;
+    color: $text-color-1;
+    margin-bottom: 5px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 4px;
+      left: -25px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: solid 2px $main-color;
+      background: transparent;
+      box-shadow: $shadow-1;
+    }
+  }
+}
+/* ------------------------------
+
+link
+
+------------------------------ */
+.art-link {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 10px;
+  display: inline-block;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  margin-right: 15px;
+  margin-bottom: 10px;
+  color: $text-color-2;
+  transition: $tr-md;
+
+  &:hover {
+    color: $text-color-1;
+    text-shadow: $text-neon;
+  }
+
+  &.art-white-link {
+    color: $text-color-1;
+
+    &:hover {
+      color: $text-color-1;
+      text-shadow: $text-neon;
+      transform: translateX(5px);
+    }
+  }
+
+  &.art-color-link {
+    color: $main-color;
+
+    &:hover {
+      color: $main-color;
+      text-shadow: $text-neon;
+      transform: translateX(5px);
+    }
+  }
+
+  &.art-w-chevron {
+    padding-right: 10px;
+    &:after {
+      position: absolute;
+      font-family: "Font Awesome 5 free";
+      content: '\f054';
+      font-weight: 900;
+      display: inline-block;
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      font-size: 9px;
+      top: 0.3px;
+      transform: translateX(5px);
+      transition: $tr-md;
+    }
+
+    &:hover {
+      transform: translateX(0);
+
+      &:after {
+        transform: translateX(10px);
+      }
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+    margin-right: 0;
+  }
+
+  & i {
+    font-size: 9px;
+    margin-left: 3px;
+  }
+
+  &.art-left-link {
+    padding-left: 10px;
+    padding-right: 0;
+
+    &.art-w-chevron {
+      &:after {
+        content: '\f053';
+        left: 0;
+        transform: translateX(0);
+      }
+
+      &:hover {
+        &:after {
+          transform: translateX(-5px);
+        }
+      }
+    }
+  }
+}
+/* ------------------------------
+
+button
+
+------------------------------ */
+.art-btn {
+  text-transform: uppercase;
+  box-shadow: $shadow-2;
+  color: $info-bar-1-color;
+  background: $main-color;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  display: inline-flex;
+  justify-content: center;
+  align-content: center;
+  border: none;
+  transition: $tr-md;
+
+  & span {
+    align-self: center;
+    transition: $tr-sm;
+  }
+
+  &.art-btn-md {
+    height: 45px;
+    font-size: 11px;
+    padding: 0 35px;
+  }
+
+  &.art-btn-sm {
+    height: 40px;
+    font-size: 11px;
+    padding: 0 30px;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    color: $content-color;
+  }
+}
+/* ------------------------------
+
+space
+
+------------------------------ */
+.p-30-0 {
+  padding-top: 30px;
+  padding-bottom: 0;
+}
+
+.p-0-30 {
+  padding-top: 0;
+  padding-bottom: 30px;
+}
+
+.p-30-30 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.p-30-15 {
+  padding-top: 30px;
+  padding-bottom: 15px;
+}
+
+.p-15-15 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.p-15-0 {
+  padding-top: 15px;
+  padding-bottom: 0;
+}
+
+.p-60-0 {
+  padding-top: 60px;
+  padding-bottom: 0;
+}
+
+.p-230-0 {
+  padding-top: 230px;
+  padding-bottom: 0;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mb-15 {
+  margin-bottom: 15px;
+}
+
+.mb-25 {
+  margin-bottom: 25px;
+}
+
+.mb-30 {
+  margin-bottom: 25px;
+}
+
+@media (max-width: 1400px) {
+  .p-lg-30-0 {
+    padding-top: 30px;
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 920px) {
+  .p-md-15-0 {
+    padding-top: 15px;
+    padding-bottom: 0;
+  }
+}
