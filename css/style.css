@@ -15,6 +15,10 @@ body {
     font-smooth: subpixel-antialiased;
 }
 
+iframe
+{
+    padding-left: 20px;
+}
 /* ----- title defaults ----- */
 
 /* line 23, ../scss/_common.scss */
