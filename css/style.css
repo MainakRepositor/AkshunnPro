@@ -40,6 +40,7 @@ h6 {
 h1 {
     font-size: 52px;
     font-weight: 800;
+    color:white;
 }
 
 /* line 40, ../scss/_common.scss */
@@ -47,6 +48,7 @@ h1 {
 h4 {
     font-size: 17px;
     font-weight: 600;
+    color:white;
 }
 
 /* line 45, ../scss/_common.scss */
@@ -54,6 +56,7 @@ h4 {
 h5 {
     font-size: 14px;
     font-weight: 600;
+    color:white;
 }
 
 /* line 50, ../scss/_common.scss */
@@ -61,6 +64,7 @@ h5 {
 h6 {
     font-size: 12px;
     font-weight: 400;
+    color:white;
 }
 
 /* ----- text config ----- */
@@ -69,6 +73,7 @@ h6 {
 
 .art-sm-text {
     font-size: 11px;
+    color:white;
 }
 
 /* line 59, ../scss/_common.scss */
@@ -382,6 +387,7 @@ link
 .art-link i {
     font-size: 9px;
     margin-left: 3px;
+    color:white;
 }
 
 /* line 274, ../scss/_common.scss */
@@ -804,6 +810,7 @@ app marcup
     pointer-events: all;
     font-size: 14px;
     padding: 30px;
+    color:white;
 }
 
 /* line 154, ../scss/_markup.scss */
@@ -1060,10 +1067,7 @@ app marcup (after 290px)
 
 @media (max-width: 290px) {
     /* line 363, ../scss/_markup.scss */
-    .art-app {
-        /* ----- info bar ----- */
-    }
-    /* line 365, ../scss/_markup.scss */
+     /* line 365, ../scss/_markup.scss */
     .art-app .art-info-bar {
         width: 100vw;
     }
@@ -1077,10 +1081,7 @@ app marcup (after 230px)
 
 @media (max-width: 230px) {
     /* line 376, ../scss/_markup.scss */
-    .art-app {
-        /* ----- menu bar ----- */
-    }
-    /* line 378, ../scss/_markup.scss */
+       /* line 378, ../scss/_markup.scss */
     .art-app .art-menu-bar {
         width: 100vw;
     }
@@ -1582,11 +1583,7 @@ menu bar
 
 /* line 6, ../scss/_menu-bar.scss */
 
-.art-menu-bar {
-    /* ----- main menu  ----- */
-    /* ----- language change  ----- */
-    /* ----- current page title ----- */
-}
+
 
 /* line 8, ../scss/_menu-bar.scss */
 
@@ -3771,3 +3768,182 @@ html.is-animating .fade-left {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+section::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	
+}
+
+section::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+   
+	
+}
+
+.container {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+    padding-bottom: 100px;
+	margin: 40px 0;
+}
+
+.container .card {
+	position: relative;
+	width: 280px;
+	height: 350px;
+	background: rgba(255, 255, 255, 0.05);
+	margin: 20px;
+	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+	border-radius: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	backdrop-filter: blur(10px);
+}
+
+.container .card .content {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	transition: 0.5s;
+}
+
+.container .card:hover .content {
+	transform: translateY(-20px);
+}
+
+.container .card .content .imgBx {
+	position: relative;
+	width: 150px;
+	height: 150px;
+	overflow: hidden;
+}
+
+.container .card .content .imgBx img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.container .card .content .contentBx h3 {
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: 500;
+	font-size: 18px;
+	text-align: center;
+	margin: 20px 0 10px;
+	line-height: 1.1em;
+}
+
+.container .card .content .contentBx h3 span {
+	font-size: 12px;
+	font-weight: 300;
+	text-transform: initial;
+}
+
+.container .card .sci {
+	position: absolute;
+	bottom: 50px;
+	display: flex;
+}
+
+.container .card .sci li {
+	list-style: none;
+	margin: 0 10px;
+	transform: translateY(40px);
+	transition: 0.5s;
+	opacity: 0;
+}
+
+.container .card:hover .sci li {
+	transform: translateY(0px);
+	opacity: 1;
+}
+
+.container .card .sci li a {
+	color: #fff;
+	font-size: 20px;
+}
+
+#btx:hover
+{
+      border: 5px solid yellow;
+}
+#btun
+{
+    color:white;
+    text-decoration: none;
+}
+
+
+.cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .card {
+    margin: 10px;
+    position: relative;
+    max-width: 280px;
+    max-height: 360px;
+    box-shadow: 0 40px 60px -6px black;
+  }
+  
+  .card-title {
+    display: block;
+    text-align: center;
+    color: #fff;
+    background-color: #6184a8;
+    
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+  }
+  
+  .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: relative;
+  }
+  
+  .card-desc {
+    display: block;
+    font-size: 1.2rem;
+    position: absolute;
+    height: 0;
+    top: 0;
+    opacity: 0;
+    padding: 18px 8%;
+    background-color: white;
+    overflow-y: scroll;
+    transition: 0.8s ease;
+  }
+  
+  .card:hover .card-desc {
+    opacity: 1;
+    height: 100%;
+  }
+  
