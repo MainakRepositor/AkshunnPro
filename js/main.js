@@ -1,13 +1,4 @@
-/* -------------------------------------------
 
-Name: 		Arter
-Version:  1.0
-Author:		Nazar Miller (millerDigitalDesign)
-Portfolio:  https://themeforest.net/user/millerdigitaldesign/portfolio?ref=MillerDigitalDesign
-
-p.s. I am available for Freelance hire (UI design, web development). mail: miller.themes@gmail.com
-
-------------------------------------------- */
 $(function () {
   "use strict";
 
@@ -138,7 +129,7 @@ $(function () {
     },
   });
 
-  bar.animate(0.91);
+  bar.animate(0.81);
 
   var bar = new ProgressBar.Circle(circleprog3, {
     strokeWidth: 7,
@@ -156,7 +147,7 @@ $(function () {
     },
   });
 
-  bar.animate(0.95);
+  bar.animate(0.75);
 
   var bar = new ProgressBar.Circle(circleprog4, {
     strokeWidth: 7,
@@ -262,7 +253,7 @@ $(function () {
     },
   });
 
-  bar.animate(0.93);
+  bar.animate(0.53);
 
   var bar = new ProgressBar.Line(lineprog4, {
     strokeWidth: 1.72,
