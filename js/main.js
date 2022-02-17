@@ -298,7 +298,29 @@ $(function () {
     }
   });
 
-  
+  $("#form").submit(function () {
+    $.ajax({
+      type: "POST",
+      url: "mail.php",
+      data: $(this).serialize(),
+    }).done(function () {
+      var tl = anime.timeline({
+        easing: "easeOutExpo",
+      });
+
+      tl.add({
+        targets: ".art-submit",
+        opacity: 0,
+        scale: 0.5,
+      }).add({
+        targets: ".art-success",
+        scale: 1,
+        height: "45px",
+      });
+    });
+    return false;
+  });
+
   // portfolio filter
   $(".art-filter a").on("click", function () {
     $(".art-filter .art-current").removeClass("art-current");
@@ -490,7 +512,28 @@ $(function () {
       continuousScrolling: true,
     });
 
-    
+    $("#form").submit(function () {
+      $.ajax({
+        type: "POST",
+        url: "mail.php",
+        data: $(this).serialize(),
+      }).done(function () {
+        var tl = anime.timeline({
+          easing: "easeOutExpo",
+        });
+
+        tl.add({
+          targets: ".art-submit",
+          opacity: 0,
+          scale: 0.5,
+        }).add({
+          targets: ".art-success",
+          scale: 1,
+          height: "45px",
+        });
+      });
+      return false;
+    });
 
     // Masonry Grid
     $(".art-grid").isotope({
